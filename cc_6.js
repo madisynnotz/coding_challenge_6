@@ -70,3 +70,15 @@ const convertCurrency = (amount, exchangeRate) => {
 // Test cases
 convertCurrency(100, 1.1);   // Expected output: "Converted Amount: $110.00"
 convertCurrency(250, 0.85);  // Expected output: "Converted Amount: $212.50"
+
+// Task 6: Higher-Order Functions
+const applyBulkDiscount = (orders, discountFunction) => {
+    return orders.map(discountFunction);
+};
+
+// Test data
+let orders = [200, 600, 1200, 450, 800];
+
+let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+
+console.log(discountedOrders); // Expected output: [200, 540, 1080, 450, 720]
