@@ -60,3 +60,13 @@ const calculateSubscriptionCost = (plan, months, discount = 0) => {
 // Test cases
 calculateSubscriptionCost("Basic", 6, 10);  // Expected output: "Total Cost: $50.00"
 calculateSubscriptionCost("Premium", 12, 0); // Expected output: "Total Cost: $240.00"
+
+// Task 5: Returning Values
+const convertCurrency = (amount, exchangeRate) => {
+    let convertedAmount = amount * exchangeRate;
+    console.log(`Converted Amount: $${convertedAmount.toFixed(2)}`);
+};
+
+// Test cases
+convertCurrency(100, 1.1);   // Expected output: "Converted Amount: $110.00"
+convertCurrency(250, 0.85);  // Expected output: "Converted Amount: $212.50"
